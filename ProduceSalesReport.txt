@@ -1,0 +1,32 @@
+ ALGORITHM : compute the tax and total amount due and display 
+	
+	===================================
+	INPUT : String cusNum, String name, saleAmo, taxCode
+
+	PROCESSING STEPS : Read sales records, according to the tax code, compute each tax 
+	and add it to the saleAmo to get total amount
+
+	OUTPUTS : cusNum, name, saleAmo, salesTax and total amount
+
+	=================================
+	PSEUDOCODE : Initialize String name to null
+				 Initialize String cusNum to null
+	             Initialize double saleAmo to zero
+				 Initialize String taxCode to null
+				 Initialize double salesTax to zero
+				 Initialize double totlaAmount to zero
+				 
+				 DOWHILE morerecords exist
+                 Read sales record
+				 CASE OF taxCode
+				    0: salesTax%=0 salesTax=0 totlaAmount=saleAmo+salesTax
+					1: salesTax%=3 salesTax=saleAmo*(3/100) totlaAmount=saleAmo+salesTax
+					2: salesTax%=5 salesTax=saleAmo*(5/100) totalAmount=saleAmo+salesTax
+				 Print "Sales Report"
+				 Diaplay cusNum, name, saleAmo, salesTax, and totalAmount
+				 
+	Test Data
+	  taxCode: 2
+	  saleAmo:$350
+	  salesTax: 350 *(5/100) = 17.5
+	  totalAmount: 350+17.5=367.5
